@@ -1,0 +1,493 @@
+# Проверенные и частично проверенные источники вне парсера Росгосцирка.
+
+EXTRA_WEBSITES = [
+    {
+        "name": "Краснодарский государственный цирк",
+        "url": "https://krasnodar-circus.ru",
+        "city": "Краснодар",
+        "region": "Краснодарский край",
+        "organization": "Госцирк (регион)",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Государственный цирк Удмуртии (Ижевск)",
+        "url": "http://udmcircus.ru",
+        "city": "Ижевск",
+        "region": "Удмуртия",
+        "organization": "Госцирк (регион)",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Хабаровский краевой цирк — билеты (КНОТОК)",
+        "url": "https://knotok.ru/circus/",
+        "city": "Хабаровск",
+        "region": "Хабаровский край",
+        "organization": "Госцирк (регион)",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк «Граф Орлов»",
+        "url": "https://www.circusgraforlov.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Виват»",
+        "url": "https://www.vivatcircus.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Салют»",
+        "url": "https://circusalute.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Circusland «Империя хищников»",
+        "url": "https://circusland-show.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Торнадо»",
+        "url": "https://circus-tornado.ru",
+        "city": "Санкт-Петербург",
+        "region": "Санкт-Петербург",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк Демидовых",
+        "url": "https://demidovshow.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Джокер»",
+        "url": "https://www.circusjoker.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Звезда»",
+        "url": "https://circuszvezda.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк «Счастья»",
+        "url": "https://www.happycircus.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк династии Довгалюк",
+        "url": "https://circus-dovgalyuk.ru",
+        "city": "Ростов-на-Дону",
+        "region": "Ростовская область",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито «Фараон»",
+        "url": "https://faraoncircus.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито GRAND",
+        "url": "https://circusgrand.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк Чудес",
+        "url": "https://wonder-circus.ru",
+        "city": "Москва",
+        "region": "Москва",
+        "organization": "Частный коллектив",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк-шапито Show",
+        "url": "https://shapitoshow.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк «Премьер»",
+        "url": "https://premiercircus.ru",
+        "organization": "Шапито",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Королевский цирк — Гия Эрадзе",
+        "url": "https://royalcircus.ru",
+        "organization": "Гастрольный коллектив",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Цирк на воде «Шевченко Шоу»",
+        "url": "https://www.aqua-circus.ru",
+        "organization": "Гастрольный коллектив",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Афиша шапито — Cirkafisha",
+        "url": "https://cirkafisha.ru",
+        "organization": "Агрегатор",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Первый ряд — афиша цирков",
+        "url": "https://1-ryad.ru",
+        "organization": "Агрегатор",
+        "verification_status": "verified",
+    },
+    {
+        "name": "RusCircus — портал о цирке",
+        "url": "https://www.ruscircus.ru",
+        "organization": "Агрегатор",
+        "verification_status": "verified",
+    },
+    {
+        "name": "Народный коллектив «Цирк на сцене» (Ульяновск)",
+        "url": "http://cultura-cnk.ru/narodnie-kollektivi/narodniy-kollektiv-tsirk-na-stsene",
+        "city": "Ульяновск",
+        "region": "Ульяновская область",
+        "organization": "Цирк на сцене",
+        "verification_status": "verified",
+    },
+]
+
+# screen_name или club{id}
+VK_KNOWN = [
+    ("Росгосцирк", "rosgoscirc", "Росгосцирк", "verified"),
+    ("Московский цирк Никулина", "circusnikulin", "Росгосцирк", "verified"),
+    ("Большой Московский цирк (Вернадского)", "vernadsky_circus", "Росгосцирк", "candidate"),
+    ("Цирк на Фонтанке", "circusciniselli", "Росгосцирк", "verified"),
+    ("Цирк в Автово", "circus_avtovo", "Росгосцирк", "candidate"),
+    ("Государственный цирк Удмуртии", "club79774283", "Госцирк (регион)", "verified"),
+    ("Симферопольский цирк им. Тезикова", "club85540620", "Росгосцирк", "verified"),
+    ("Цирк-шапито «Виват»", "vivat_circus", "Шапито", "verified"),
+    ("Цирк «Счастья»", "club142093574", "Шапито", "verified"),
+    ("Цирк-шапито «Аэробус»", "club215827355", "Шапито", "verified"),
+    ("Цирк-шапито «Звёздный»", "club213926691", "Шапито", "verified"),
+    ("Цирк-шапито GRAND", "grandcircus2022", "Шапито", "verified"),
+    ("Цирк «Премьер»", "premiercircus", "Шапито", "verified"),
+    ("Цирк Чудес", "wonder.circus", "Частный коллектив", "verified"),
+    ("Цирк династии Довгалюк", "circus_dovgalyuk", "Шапито", "candidate"),
+    ("Цирк-шапито «Фараон»", "faraon_circus", "Шапито", "candidate"),
+    ("Цирк-шапито «Салют»", "circusalute", "Шапито", "candidate"),
+    ("Цирк-шапито «Торнадо»", "circus_tornado", "Шапито", "candidate"),
+    ("Цирк Демидовых", "demidovshow", "Шапито", "verified"),
+    ("Цирк-шапито «Джокер»", "club202709015", "Шапито", "verified"),
+    ("Цирк-шапито Show", "shapitoshow", "Шапито", "candidate"),
+    ("Circusland", "circusland_show", "Шапито", "candidate"),
+    ("Цирк-шапито «Звезда»", "circuszvezda", "Шапито", "candidate"),
+    ("Цирк-шапито «Олимп» (Ростов)", "shapitoolimp", "Шапито", "verified"),
+    ("Цирк «Граф Орлов»", "club177569715", "Шапито", "verified"),
+    ("Цирк-шапито «РИО»", "club165298301", "Шапито", "verified"),
+    ("Цирк-шапито «Территория детства»", "club102606448", "Шапито", "verified"),
+    ("Цирк-шапито «Маска»", "club205275233", "Шапито", "verified"),
+    ("Цирк «Золото Африки»", "show.circus", "Шапито", "verified"),
+    ("Королевский цирк Гии Эрадзе", "royalcircusgiaeradze", "Гастрольный коллектив", "verified"),
+    ("Цирк на воде", "aquacircus", "Гастрольный коллектив", "verified"),
+    ("В мире цирка — RusCircus", "ruscircus", "Агрегатор", "verified"),
+    ("Цирк-шапито «Королевство 13»", "korolevstvo13", "Шапито", "candidate"),
+    ("Цирк «Скиф»", "circus_skif", "Шапито", "candidate"),
+    ("Цирк «Империя»", "circus_empire_ru", "Шапито", "candidate"),
+    ("Цирк «Атлант»", "circus_atlant", "Шапито", "candidate"),
+    ("Цирк «Багира»", "circus_bagira", "Шапито", "candidate"),
+    ("Цирк «Волшебство»", "circus_magic_ru", "Шапито", "candidate"),
+    ("Цирк «Галактика»", "circus_galaxy_ru", "Шапито", "candidate"),
+    ("Цирк «Динамит»", "circus_dynamit", "Шапито", "candidate"),
+    ("Цирк «Золотой купол»", "golden_dome_circus", "Шапито", "candidate"),
+    ("Цирк «Каникулы»", "kanikuly_circus", "Шапито", "candidate"),
+    ("Цирк «Карнавал»", "carnival_circus_ru", "Шапито", "candidate"),
+    ("Цирк «Колизей»", "circus_coliseum", "Шапито", "candidate"),
+    ("Цирк «Космос»", "circus_cosmos_ru", "Шапито", "candidate"),
+    ("Цирк «Луч»", "circus_luch", "Шапито", "candidate"),
+    ("Цирк «Максимус»", "circus_maximus_ru", "Шапито", "candidate"),
+    ("Цирк «Олимп»", "circus_olimp_ru", "Шапито", "candidate"),
+    ("Цирк «Парад»", "circus_parad", "Шапито", "candidate"),
+    ("Цирк «Радуга» (шапито)", "circus_raduga_shapito", "Шапито", "candidate"),
+    ("Цирк «Рио» (альт.)", "rio_circus", "Шапито", "candidate"),
+    ("Цирк «Русь»", "circus_rus_shapito", "Шапито", "candidate"),
+    ("Цирк «Сказка»", "skazka_circus", "Шапито", "candidate"),
+    ("Цирк «Созвездие»", "sozvezdie_circus", "Шапито", "candidate"),
+    ("Цирк «Урал»", "circus_ural_shapito", "Шапито", "candidate"),
+    ("Цирк «Фантазия»", "fantasy_circus_ru", "Шапито", "candidate"),
+    ("Цирк «Шоу-ленд»", "showland_circus", "Шапито", "candidate"),
+    ("Цирк «Экстрим»", "circus_extreme_ru", "Шапито", "candidate"),
+    ("Цирк «Юность» (шапито)", "circus_yunost_shapito", "Шапито", "candidate"),
+    ("Цирк «Аква»", "aqua_circus_show", "Шапито", "candidate"),
+    ("Цирк «Бурлеск» (гастроли)", "burlesque_circus", "Гастрольный коллектив", "candidate"),
+    ("Продюсерский центр Гии Эрадзе", "gia_eradze_circus", "Гастрольный коллектив", "candidate"),
+]
+
+# Региональные госцирки — типичные screen_name (кандидаты)
+STATE_CIRCUS_VK = [
+    ("Астраханский цирк", "circus_astrakhan", "Астрахань", "Астраханская область"),
+    ("Брянский цирк", "circus_bryansk", "Брянск", "Брянская область"),
+    ("Владивостокский цирк", "circus_vladivostok", "Владивосток", "Приморский край"),
+    ("Волгоградский цирк", "circus_volgograd", "Волгоград", "Волгоградская область"),
+    ("Воронежский цирк", "circus_voronezh", "Воронеж", "Воронежская область"),
+    ("Екатеринбургский цирк", "circus_ekb", "Екатеринбург", "Свердловская область"),
+    ("Ивановский цирк", "circus_ivanovo", "Иваново", "Ивановская область"),
+    ("Иркутский цирк", "circus_irkutsk", "Иркутск", "Иркутская область"),
+    ("Казанский цирк", "kazan_circus", "Казань", "Татарстан"),
+    ("Кемеровский цирк", "circus_kemerovo", "Кемерово", "Кемеровская область"),
+    ("Кировский цирк", "circus_kirov", "Киров", "Кировская область"),
+    ("Кисловодский цирк", "circus_kislovodsk", "Кисловодск", "Ставропольский край"),
+    ("Костромской цирк", "circus_kostroma", "Кострома", "Костромская область"),
+    ("Краснодарский цирк", "circus_krasnodar", "Краснодар", "Краснодарский край"),
+    ("Красноярский цирк", "circus_krasnoyarsk", "Красноярск", "Красноярский край"),
+    ("Курский цирк", "circus_kursk", "Курск", "Курская область"),
+    ("Магнитогорский цирк", "circus_magnitogorsk", "Магнитогорск", "Челябинская область"),
+    ("Нижегородский цирк", "circus_nnovgorod", "Нижний Новгород", "Нижегородская область"),
+    ("Нижнетагильский цирк", "circus_ntagil", "Нижний Тагил", "Свердловская область"),
+    ("Новокузнецкий цирк", "circus_novokuznetsk", "Новокузнецк", "Кемеровская область"),
+    ("Новосибирский цирк", "circus_novosibirsk", "Новосибирск", "Новосибирская область"),
+    ("Омский цирк", "circus_omsk", "Омск", "Омская область"),
+    ("Оренбургский цирк", "circus_orenburg", "Оренбург", "Оренбургская область"),
+    ("Пензенский цирк", "circus_penza", "Пенза", "Пензенская область"),
+    ("Пермский цирк", "circus_perm", "Пермь", "Пермский край"),
+    ("Ростовский цирк", "circus_rostov", "Ростов-на-Дону", "Ростовская область"),
+    ("Рязанский цирк", "circus_ryazan", "Рязань", "Рязанская область"),
+    ("Самарский цирк", "circus_samara", "Самара", "Самарская область"),
+    ("Саратовский цирк", "circus_saratov", "Саратов", "Саратовская область"),
+    ("Севастопольский цирк", "circus_sevastopol", "Севастополь", "Севастополь"),
+    ("Сочинский цирк", "circus_sochi", "Сочи", "Краснодарский край"),
+    ("Ставропольский цирк", "circus_stavropol", "Ставрополь", "Ставропольский край"),
+    ("Тверской цирк", "circus_tver", "Тверь", "Тверская область"),
+    ("Тульский цирк", "circus_tula", "Тула", "Тульская область"),
+    ("Тюменский цирк", "circus_tyumen", "Тюмень", "Тюменская область"),
+    ("Уфимский цирк", "circus_ufa", "Уфа", "Башкортостан"),
+    ("Хабаровский цирк", "circus_khabarovsk", "Хабаровск", "Хабаровский край"),
+    ("Челябинский цирк", "circus_chelyabinsk", "Челябинск", "Челябинская область"),
+    ("Ярославский цирк", "circus_yaroslavl", "Ярославль", "Ярославская область"),
+    ("Алмазный цирк (Якутия)", "diamond_circus", "Якутск", "Якутия"),
+    ("Цирк-шапито «Азовье»", "circus_taganrog", "Таганрог", "Ростовская область"),
+    ("Цирк-шапито «Радуга»", "circus_raduga", "Москва", "Москва"),
+]
+
+SCENE_CITIES = [
+    ("Москва", "Москва"),
+    ("Санкт-Петербург", "Санкт-Петербург"),
+    ("Ульяновск", "Ульяновская область"),
+    ("Брянск", "Брянская область"),
+    ("Воронеж", "Воронежская область"),
+    ("Краснодар", "Краснодарский край"),
+    ("Самара", "Самарская область"),
+    ("Тольятти", "Самарская область"),
+    ("Пенза", "Пензенская область"),
+    ("Ижевск", "Удмуртия"),
+    ("Пермь", "Пермский край"),
+    ("Чебоксары", "Чувашия"),
+    ("Йошкар-Ола", "Марий Эл"),
+    ("Саранск", "Мордовия"),
+    ("Оренбург", "Оренбургская область"),
+    ("Астрахань", "Астраханская область"),
+    ("Волгоград", "Волгоградская область"),
+    ("Тула", "Тульская область"),
+    ("Калуга", "Калужская область"),
+    ("Липецк", "Липецкая область"),
+    ("Тамбов", "Тамбовская область"),
+    ("Курск", "Курская область"),
+    ("Белгород", "Белгородская область"),
+    ("Владимир", "Владимирская область"),
+    ("Иваново", "Ивановская область"),
+    ("Кострома", "Костромская область"),
+    ("Ярославль", "Ярославская область"),
+    ("Ростов-на-Дону", "Ростовская область"),
+    ("Ставрополь", "Ставропольский край"),
+    ("Нальчик", "Кабардино-Балкария"),
+    ("Махачкала", "Дагестан"),
+    ("Сочи", "Краснодарский край"),
+    ("Новосибирск", "Новосибирская область"),
+    ("Омск", "Омская область"),
+    ("Томск", "Томская область"),
+    ("Кемерово", "Кемеровская область"),
+    ("Барнаул", "Алтайский край"),
+    ("Иркутск", "Иркутская область"),
+    ("Хабаровск", "Хабаровский край"),
+    ("Владивосток", "Приморский край"),
+    ("Чита", "Забайкальский край"),
+    ("Улан-Удэ", "Бурятия"),
+    ("Красноярск", "Красноярский край"),
+    ("Тюмень", "Тюменская область"),
+    ("Сургут", "ХМАО"),
+    ("Нижний Новгород", "Нижегородская область"),
+    ("Казань", "Татарстан"),
+    ("Уфа", "Башкортостан"),
+    ("Челябинск", "Челябинская область"),
+    ("Екатеринбург", "Свердловская область"),
+    ("Смоленск", "Смоленская область"),
+    ("Псков", "Псковская область"),
+    ("Великий Новгород", "Новгородская область"),
+    ("Мурманск", "Мурманская область"),
+    ("Петрозаводск", "Карелия"),
+    ("Сыктывкар", "Коми"),
+    ("Калининград", "Калининградская область"),
+    ("Вологда", "Вологодская область"),
+    ("Череповец", "Вологодская область"),
+    ("Архангельск", "Архангельская область"),
+    ("Северодвинск", "Архангельская область"),
+    ("Саратов", "Саратовская область"),
+    ("Энгельс", "Саратовская область"),
+    ("Балашиха", "Московская область"),
+    ("Подольск", "Московская область"),
+    ("Химки", "Московская область"),
+    ("Мытищи", "Московская область"),
+    ("Королёв", "Московская область"),
+    ("Люберцы", "Московская область"),
+    ("Орёл", "Орловская область"),
+    ("Калининград", "Калининградская область"),
+    ("Симферополь", "Крым"),
+    ("Севастополь", "Севастополь"),
+    ("Грозный", "Чечня"),
+    ("Владикавказ", "Северная Осетия"),
+    ("Черкесск", "Карачаево-Черкесия"),
+    ("Элиста", "Калмыкия"),
+    ("Абакан", "Хакасия"),
+    ("Кызыл", "Тыва"),
+    ("Горно-Алтайск", "Алтай"),
+    ("Бийск", "Алтайский край"),
+    ("Рубцовск", "Алтайский край"),
+    ("Новокузнецк", "Кемеровская область"),
+    ("Прокопьевск", "Кемеровская область"),
+    ("Нижний Тагил", "Свердловская область"),
+    ("Магнитогорск", "Челябинская область"),
+    ("Стерлитамак", "Башкортостан"),
+    ("Набережные Челны", "Татарстан"),
+    ("Нижнекамск", "Татарстан"),
+    ("Дзержинск", "Нижегородская область"),
+    ("Арзамас", "Нижегородская область"),
+    ("Рыбинск", "Ярославская область"),
+    ("Таганрог", "Ростовская область"),
+    ("Шахты", "Ростовская область"),
+    ("Волжский", "Волгоградская область"),
+    ("Старый Оскол", "Белгородская область"),
+    ("Благовещенск", "Амурская область"),
+    ("Южно-Сахалинск", "Сахалинская область"),
+    ("Петропавловск-Камчатский", "Камчатский край"),
+    ("Якутск", "Якутия"),
+    ("Норильск", "Красноярский край"),
+    ("Ангарск", "Иркутская область"),
+    ("Братск", "Иркутская область"),
+    ("Уссурийск", "Приморский край"),
+    ("Находка", "Приморский край"),
+    ("Артём", "Приморский край"),
+    ("Комсомольск-на-Амуре", "Хабаровский край"),
+    ("Старый Оскол", "Белгородская область"),
+]
+
+
+def build_vk_catalog():
+    from discovery.normalize import normalize_url, vk_url_from_id
+
+    items = []
+
+    for name, slug, org, status in VK_KNOWN:
+        club_digits = slug[4:] if slug.startswith("club") else ""
+        if slug.startswith("club") and club_digits.isdigit():
+            url = vk_url_from_id(int(club_digits), None)
+        else:
+            url = normalize_url(f"https://vk.com/{slug}")
+        items.append(
+            {
+                "name": name,
+                "url": url,
+                "organization": org,
+                "verification_status": status,
+                "description": "Каталог известных VK-сообществ",
+            }
+        )
+
+    for name, slug, city, region in STATE_CIRCUS_VK:
+        items.append(
+            {
+                "name": name,
+                "url": normalize_url(f"https://vk.com/{slug}"),
+                "city": city,
+                "region": region,
+                "organization": "Росгосцирк",
+                "verification_status": "candidate",
+                "description": "Типичный screen_name госцирка — проверить",
+            }
+        )
+
+    slug_map = {
+        "Москва": "moscow",
+        "Санкт-Петербург": "spb",
+        "Ростов-на-Дону": "rostov",
+        "Нижний Новгород": "nnov",
+        "Йошкар-Ола": "yoshkar",
+        "Великий Новгород": "novgorod",
+        "Набережные Челны": "chelny",
+        "Комсомольск-на-Амуре": "kms",
+        "Петропавловск-Камчатский": "pk",
+        "Южно-Сахалинск": "yuzhno",
+    }
+
+    for city, region in SCENE_CITIES:
+        slug = slug_map.get(city, city.lower().replace(" ", "_").replace("-", "_"))
+        items.append(
+            {
+                "name": f"«Цирк на сцене» — {city}",
+                "url": normalize_url(f"https://vk.com/circus_na_scene_{slug}"),
+                "city": city,
+                "region": region,
+                "organization": "Цирк на сцене",
+                "verification_status": "candidate",
+                "description": "Кандидат по шаблону имени — проверить",
+            }
+        )
+
+    # Дополнительные шаблоны шапито по городам (гастроли часто анонсируют в VK)
+    for city, region in SCENE_CITIES:
+        slug = slug_map.get(city, city.lower().replace(" ", "_").replace("-", "_"))
+        items.append(
+            {
+                "name": f"Цирк-шапито в г. {city} (кандидат)",
+                "url": normalize_url(f"https://vk.com/circus_shapito_{slug}"),
+                "city": city,
+                "region": region,
+                "organization": "Шапито",
+                "verification_status": "candidate",
+                "description": "Кандидат: локальная группа гастролей",
+            }
+        )
+        items.append(
+            {
+                "name": f"Гастроли цирка — {city} (кандидат)",
+                "url": normalize_url(f"https://vk.com/circus_gastroli_{slug}"),
+                "city": city,
+                "region": region,
+                "organization": "Шапито",
+                "verification_status": "candidate",
+                "description": "Кандидат: локальная группа гастролей",
+            }
+        )
+
+    from discovery.cities_extra import EXTRA_CITY_SLUGS, VK_SLUG_PATTERNS
+    from discovery.normalize import normalize_url
+
+    for city, region, slug in EXTRA_CITY_SLUGS:
+        for pattern in VK_SLUG_PATTERNS:
+            screen = pattern.format(slug=slug)
+            items.append(
+                {
+                    "name": f"Цирк — {city} ({screen})",
+                    "url": normalize_url(f"https://vk.com/{screen}"),
+                    "city": city,
+                    "region": region,
+                    "organization": "Шапито",
+                    "verification_status": "candidate",
+                    "description": "Региональный кандидат по шаблону имени",
+                }
+            )
+
+    return items

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow">Сервис для директоров и подписных администраторов</p>
+        <h1>Планирование маршрута гастролей цирка</h1>
+        <p class="lead">
+            «Подписант» помогает отслеживать, где сейчас выступают цирковые коллективы
+            и какие площадки заняты. Начинаем с мониторинга — дальше маршрутные листы и аналитика.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ url_for('sources') }}" class="btn btn-primary">Смотреть источники</a>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container stats-grid">
+        <article class="stat-card">
+            <span class="stat-value">{{ total_count }}</span>
+            <span class="stat-label">источников в базе</span>
+        </article>
+        <article class="stat-card">
+            <span class="stat-value">{{ website_count }}</span>
+            <span class="stat-label">официальных сайтов</span>
+        </article>
+        <article class="stat-card">
+            <span class="stat-value">{{ vk_count }}</span>
+            <span class="stat-label">групп ВКонтакте</span>
+        </article>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h2>Базовый функционал</h2>
+        <div class="features-grid">
+            <article class="feature-card">
+                <h3>Мониторинг площадок</h3>
+                <p>Стационарные цирки Росгосцирка, шапито и гастрольные коллективы — в одном справочнике источников.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Прозрачность данных</h3>
+                <p>Для каждой записи указывается источник и дата обновления. Сайты и группы ВК разделены по категориям.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Маршрутный лист</h3>
+                <p class="muted">Скоро: построение гастрольного маршрута с учётом занятости площадок и конкурентов.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

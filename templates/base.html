@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Подписант{% endblock %} — планирование гастролей</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="{{ url_for('index') }}" class="logo">
+                <span class="logo-mark">🎪</span>
+                <span class="logo-text">
+                    <strong>Подписант</strong>
+                    <small>мониторинг цирковых гастролей</small>
+                </span>
+            </a>
+            <nav class="nav">
+                <a href="{{ url_for('index') }}" class="nav-link{% if request.endpoint == 'index' %} active{% endif %}">Главная</a>
+                <a href="{{ url_for('sources') }}" class="nav-link{% if request.endpoint == 'sources' %} active{% endif %}">Источники</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Данные собираются из открытых источников. Сервис не аффилирован с Росгосцирком и ВКонтакте.</p>
+        </div>
+    </footer>
+</body>
+</html>
